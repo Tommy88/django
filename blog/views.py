@@ -3,4 +3,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def blog_list(request):
-    return HttpResponse('<h1>Hello Kitty</h1>')
+    n = 'Hello World'
+    return render(request, 'blog/index.html', context={'phrase': n})
